@@ -1,0 +1,25 @@
+﻿<Window x:Class="SkillboxWPF.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkillboxWPF"
+        mc:Ignorable="d"
+        Title="AuthWindow" Height="350" Width="400"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="Вход" HorizontalAlignment="Center" FontSize="36"/>
+            <DockPanel HorizontalAlignment="Center">
+                <Label Content="Логин: " FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox Name="loginBox" Margin="10" Text="Admin" HorizontalAlignment="Center" Width="200" HorizontalContentAlignment="Center"/>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Center">
+                <Label Content="Пароль: " FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox Name="passBox" Margin="10" Text="Admin" HorizontalAlignment="Center" Width="200" HorizontalContentAlignment="Center"/>
+            </DockPanel>
+            <Button x:Name="authBtn" Margin="0,20,0,0" Width="240" Content="Войти" FontSize="18" Click="authBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

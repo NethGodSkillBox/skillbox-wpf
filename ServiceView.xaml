@@ -1,0 +1,18 @@
+﻿<Window x:Class="SkillboxWPF.ServiceView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkillboxWPF"
+        mc:Ignorable="d"
+        Title="ServiceView" Height="425" Width="500"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/Letter_S_blue_34883.png">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBox Name="titleBox" Text="Title" FontSize="16" Margin="0,0,0,20" HorizontalContentAlignment="Center"/>
+            <TextBox Name="textBox" Text="Title" FontSize="14" Height="250" HorizontalContentAlignment="Center" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+            <Button Name="saveBtn" Width="200" Content="Сохранить" Margin="0,20,0,0" Cursor="Hand" Click="saveBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

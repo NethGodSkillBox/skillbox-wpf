@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
 
-namespace SkillboxWPF
+namespace SkillboxWPF.Static
 {
     public static class Web
     {
@@ -16,7 +16,7 @@ namespace SkillboxWPF
         {
             try
             {
-                var get = await hc.SendAsync(new HttpRequestMessage(System.Net.Http.HttpMethod.Get, $"{url}"));
+                var get = await hc.SendAsync(new HttpRequestMessage(HttpMethod.Get, $"{url}"));
                 var text = await get.Content.ReadAsStringAsync();
                 return text;
             }
@@ -29,8 +29,8 @@ namespace SkillboxWPF
         {
             try
             {
-                var PostAddFav = new HttpRequestMessage(System.Net.Http.HttpMethod.Post, $"{url}");
-                PostAddFav.Content = new System.Net.Http.StringContent($"{data}", Encoding.UTF8, "application/x-www-form-urlencoded");
+                var PostAddFav = new HttpRequestMessage(HttpMethod.Post, $"{url}");
+                PostAddFav.Content = new StringContent($"{data}", Encoding.UTF8, "application/x-www-form-urlencoded");
                 var PostAddFavSend = await hc.SendAsync(PostAddFav);
                 var text = await PostAddFavSend.Content.ReadAsStringAsync();
                 return text;

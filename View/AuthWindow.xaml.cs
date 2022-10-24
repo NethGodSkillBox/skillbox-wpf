@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillboxWPF.Static;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;

@@ -4,15 +4,16 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Letter_S_blue_34883.ico</ApplicationIcon>
+    <ApplicationIcon>ico\Letter_S_blue_34883.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Letter_S_blue_34883.png" />
+    <None Remove="View\Letter_S_blue_34883.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Letter_S_blue_34883.ico" />
+    <Content Include="ico\Letter_S_blue_34883.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Letter_S_blue_34883.png" />
+    <Resource Include="ico\Letter_S_blue_34883.png" />
+    <Resource Include="View\Letter_S_blue_34883.png" />
   </ItemGroup>
 
 </Project>

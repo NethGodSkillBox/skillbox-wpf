@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ServiceView" Height="425" Width="500"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/Letter_S_blue_34883.png">
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/View/Letter_S_blue_34883.png">
     <Grid>
         <StackPanel Margin="10">
             <TextBox Name="titleBox" Text="Title" FontSize="16" Margin="0,0,0,20" HorizontalContentAlignment="Center"/>

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using SkillboxWPF.Models;
+using SkillboxWPF.Static;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

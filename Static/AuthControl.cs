@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace SkillboxWPF
+namespace SkillboxWPF.Static
 {
     public static class AuthControl
     {
@@ -16,8 +16,8 @@ namespace SkillboxWPF
         {
             try
             {
-                var PostAddFav = new HttpRequestMessage(System.Net.Http.HttpMethod.Post, "http://localhost:36255/token");
-                PostAddFav.Content = new System.Net.Http.StringContent($"data=username={login},password={pass}", Encoding.UTF8, "application/x-www-form-urlencoded");
+                var PostAddFav = new HttpRequestMessage(HttpMethod.Post, "http://localhost:36255/token");
+                PostAddFav.Content = new StringContent($"data=username={login},password={pass}", Encoding.UTF8, "application/x-www-form-urlencoded");
                 var PostAddFavSend = await client.SendAsync(PostAddFav);
                 var text = await PostAddFavSend.Content.ReadAsStringAsync();
                 if (!text.Contains("Invalid username or password"))
@@ -44,7 +44,7 @@ namespace SkillboxWPF
         {
             try
             {
-                var get = await client.SendAsync(new HttpRequestMessage(System.Net.Http.HttpMethod.Get, "http://localhost:36255/api/Home/getlogin"));
+                var get = await client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "http://localhost:36255/api/Home/getlogin"));
                 var text = await get.Content.ReadAsStringAsync();
 
                 if (text.Contains("Ваш логин"))
@@ -64,7 +64,7 @@ namespace SkillboxWPF
         {
             try
             {
-                var get = client.SendAsync(new HttpRequestMessage(System.Net.Http.HttpMethod.Get, "http://localhost:36255/api/Home/getlogin")).Result;
+                var get = client.SendAsync(new HttpRequestMessage(HttpMethod.Get, "http://localhost:36255/api/Home/getlogin")).Result;
                 var text = get.Content.ReadAsStringAsync().Result;
 
                 if (text.Contains("Ваш логин"))

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace SkillboxWPF
+namespace SkillboxWPF.Models
 {
     internal class Req : INotifyPropertyChanged
     {

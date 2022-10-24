@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SkillboxWPF
+namespace SkillboxWPF.Models
 {
     internal class AuthInfo
     {
